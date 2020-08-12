@@ -1,0 +1,82 @@
+[
+  {
+    "Code": "MATH175",
+    "Name": "Functions and Number Systems",
+    "Semester": {
+      "year": 2020,
+      "season": 0
+    }
+  },
+  {
+    "Code": "COMP391",
+    "Name": "Introduction to Game Development and Simulation",
+    "Semester": {
+      "year": 2020,
+      "season": 0
+    }
+  },
+  {
+    "Code": "COMP100",
+    "Name": "Programming 1",
+    "Semester": {
+      "year": 2020,
+      "season": 0
+    }
+  },
+  {
+    "Code": "COMP213",
+    "Name": "Web Interface Design",
+    "Semester": {
+      "year": 2020,
+      "season": 0
+    }
+  },
+  {
+    "Code": "COMP125",
+    "Name": "Client-Side Web Development",
+    "Semester": {
+      "year": 2020,
+      "season": 1
+    }
+  },
+  {
+    "Code": "COMP122",
+    "Name": "Introduction to Database",
+    "Semester": {
+      "year": 2020,
+      "season": 1
+    }
+  },
+  {
+    "Code": "COMP123",
+    "Name": "Programming 2",
+    "Semester": {
+      "year": 2020,
+      "season": 1
+    }
+  },
+  {
+    "Code": "COMP301",
+    "Name": "Unix/Linux Operating Systems",
+    "Semester": {
+      "year": 2020,
+      "season": 1
+    }
+  },
+  {
+    "Code": "COMP253",
+    "Name": "Assets for Game Developers",
+    "Semester": {
+      "year": 2020,
+      "season": 1
+    }
+  },
+  {
+    "Code": "COMP225",
+    "Name": "Software Engineering Methodologies 1",
+    "Semester": {
+      "year": 2020,
+      "season": 1
+    }
+  }
+]
