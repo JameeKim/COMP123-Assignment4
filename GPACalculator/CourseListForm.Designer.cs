@@ -35,6 +35,10 @@ namespace GPACalculator
             this.backButton = new System.Windows.Forms.Button();
             this.contentPanel = new System.Windows.Forms.Panel();
             this.coursesListView = new System.Windows.Forms.DataGridView();
+            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.semesterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.searchGroup = new System.Windows.Forms.GroupBox();
             this.searchLayout = new System.Windows.Forms.TableLayoutPanel();
             this.searchSeasonLayout = new System.Windows.Forms.FlowLayoutPanel();
@@ -52,14 +56,11 @@ namespace GPACalculator
             this.searchEnabled = new System.Windows.Forms.CheckBox();
             this.footerPanel = new System.Windows.Forms.Panel();
             this.addCoursesButton = new System.Windows.Forms.Button();
-            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.semesterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.titlePanel.SuspendLayout();
             this.backButtonPanel.SuspendLayout();
             this.contentPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.coursesListView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).BeginInit();
             this.searchGroup.SuspendLayout();
             this.searchLayout.SuspendLayout();
             this.searchSeasonLayout.SuspendLayout();
@@ -67,7 +68,6 @@ namespace GPACalculator
             this.searchSemesterLayout.SuspendLayout();
             this.searchNameLayout.SuspendLayout();
             this.footerPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // titleLabel
@@ -128,7 +128,6 @@ namespace GPACalculator
             this.coursesListView.AllowUserToDeleteRows = false;
             this.coursesListView.AutoGenerateColumns = false;
             this.coursesListView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.coursesListView.BackgroundColor = System.Drawing.Color.LightCyan;
             this.coursesListView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.coursesListView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codeDataGridViewTextBoxColumn,
@@ -144,6 +143,34 @@ namespace GPACalculator
             this.coursesListView.Size = new System.Drawing.Size(964, 531);
             this.coursesListView.StandardTab = true;
             this.coursesListView.TabIndex = 6;
+            // 
+            // codeDataGridViewTextBoxColumn
+            // 
+            this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
+            this.codeDataGridViewTextBoxColumn.HeaderText = "Code";
+            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
+            this.codeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codeDataGridViewTextBoxColumn.Width = 65;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // semesterDataGridViewTextBoxColumn
+            // 
+            this.semesterDataGridViewTextBoxColumn.DataPropertyName = "Semester";
+            this.semesterDataGridViewTextBoxColumn.HeaderText = "Semester";
+            this.semesterDataGridViewTextBoxColumn.Name = "semesterDataGridViewTextBoxColumn";
+            this.semesterDataGridViewTextBoxColumn.ReadOnly = true;
+            this.semesterDataGridViewTextBoxColumn.Width = 92;
+            // 
+            // courseBindingSource
+            // 
+            this.courseBindingSource.DataSource = typeof(GPACalculator.Course);
             // 
             // searchGroup
             // 
@@ -335,39 +362,10 @@ namespace GPACalculator
             this.addCoursesButton.UseVisualStyleBackColor = true;
             this.addCoursesButton.Click += new System.EventHandler(this.addCoursesButton_Click);
             // 
-            // codeDataGridViewTextBoxColumn
-            // 
-            this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
-            this.codeDataGridViewTextBoxColumn.HeaderText = "Code";
-            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
-            this.codeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codeDataGridViewTextBoxColumn.Width = 65;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // semesterDataGridViewTextBoxColumn
-            // 
-            this.semesterDataGridViewTextBoxColumn.DataPropertyName = "Semester";
-            this.semesterDataGridViewTextBoxColumn.HeaderText = "Semester";
-            this.semesterDataGridViewTextBoxColumn.Name = "semesterDataGridViewTextBoxColumn";
-            this.semesterDataGridViewTextBoxColumn.ReadOnly = true;
-            this.semesterDataGridViewTextBoxColumn.Width = 92;
-            // 
-            // courseBindingSource
-            // 
-            this.courseBindingSource.DataSource = typeof(GPACalculator.Course);
-            // 
             // CourseListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(964, 681);
             this.Controls.Add(this.footerPanel);
             this.Controls.Add(this.contentPanel);
@@ -382,6 +380,7 @@ namespace GPACalculator
             this.backButtonPanel.ResumeLayout(false);
             this.contentPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.coursesListView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).EndInit();
             this.searchGroup.ResumeLayout(false);
             this.searchLayout.ResumeLayout(false);
             this.searchLayout.PerformLayout();
@@ -394,7 +393,6 @@ namespace GPACalculator
             this.searchNameLayout.ResumeLayout(false);
             this.searchNameLayout.PerformLayout();
             this.footerPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
