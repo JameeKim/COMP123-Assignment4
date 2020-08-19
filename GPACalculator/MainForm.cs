@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Web.Script.Serialization;
 using System.Windows.Forms;
+using Testing;
 
 namespace GPACalculator
 {
@@ -19,9 +20,12 @@ namespace GPACalculator
         /// </summary>
         private CourseListForm coursesWindow;
 
-        public MainForm(List<Course> courses)
+        private readonly SplashScreen splashScreen;
+
+        public MainForm(List<Course> courses, SplashScreen splashScreen)
         {
             this.courses = courses;
+            this.splashScreen = splashScreen;
             grades = new DataList<GradeEntry>();
             InitializeComponent();
         }
@@ -60,6 +64,16 @@ namespace GPACalculator
 
             double gpa = grades.Average(entry => entry.Grade); // LINQ method (Average)
             gpaValue.Text = $"{gpa:F2}";
+        }
+
+        /// <summary>
+        /// Close the splash screen window so that the application quits successfully
+        /// </summary>
+        /// <param name="sender">Target control that invoked this event</param>
+        /// <param name="e">Arguments passed to this event</param>
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            splashScreen.Close();
         }
 
         /// <summary>

@@ -4,6 +4,7 @@ using System.IO;
 using System.Text;
 using System.Web.Script.Serialization;
 using System.Windows.Forms;
+using Testing;
 
 namespace GPACalculator
 {
@@ -47,7 +48,7 @@ namespace GPACalculator
             }
 
             courses.Sort();
-            Application.Run(new MainForm(courses));
+            Application.Run(new SplashScreen(courses));
         }
     }
 }

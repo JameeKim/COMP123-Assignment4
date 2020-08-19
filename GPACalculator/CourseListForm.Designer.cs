@@ -36,19 +36,20 @@ namespace GPACalculator
             this.contentPanel = new System.Windows.Forms.Panel();
             this.coursesListView = new System.Windows.Forms.DataGridView();
             this.searchGroup = new System.Windows.Forms.GroupBox();
-            this.searchLayout = new System.Windows.Forms.FlowLayoutPanel();
-            this.searchCodeLayout = new System.Windows.Forms.FlowLayoutPanel();
-            this.searchCodeLabel = new System.Windows.Forms.Label();
-            this.searchCode = new System.Windows.Forms.ComboBox();
-            this.searchNameLayout = new System.Windows.Forms.FlowLayoutPanel();
-            this.searchNameLabel = new System.Windows.Forms.Label();
-            this.searchName = new System.Windows.Forms.ComboBox();
-            this.searchSemesterLayout = new System.Windows.Forms.FlowLayoutPanel();
-            this.searchYearLabel = new System.Windows.Forms.Label();
+            this.searchLayout = new System.Windows.Forms.TableLayoutPanel();
             this.searchSeasonLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.searchSeasonLabel = new System.Windows.Forms.Label();
             this.searchSeason = new System.Windows.Forms.ComboBox();
+            this.searchCodeLayout = new System.Windows.Forms.FlowLayoutPanel();
+            this.searchCodeLabel = new System.Windows.Forms.Label();
+            this.searchCode = new System.Windows.Forms.ComboBox();
+            this.searchSemesterLayout = new System.Windows.Forms.FlowLayoutPanel();
+            this.searchYearLabel = new System.Windows.Forms.Label();
             this.searchYear = new System.Windows.Forms.ComboBox();
+            this.searchNameLayout = new System.Windows.Forms.FlowLayoutPanel();
+            this.searchNameLabel = new System.Windows.Forms.Label();
+            this.searchName = new System.Windows.Forms.ComboBox();
+            this.searchEnabled = new System.Windows.Forms.CheckBox();
             this.footerPanel = new System.Windows.Forms.Panel();
             this.addCoursesButton = new System.Windows.Forms.Button();
             this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,10 +62,10 @@ namespace GPACalculator
             ((System.ComponentModel.ISupportInitialize)(this.coursesListView)).BeginInit();
             this.searchGroup.SuspendLayout();
             this.searchLayout.SuspendLayout();
-            this.searchCodeLayout.SuspendLayout();
-            this.searchNameLayout.SuspendLayout();
-            this.searchSemesterLayout.SuspendLayout();
             this.searchSeasonLayout.SuspendLayout();
+            this.searchCodeLayout.SuspendLayout();
+            this.searchSemesterLayout.SuspendLayout();
+            this.searchNameLayout.SuspendLayout();
             this.footerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -127,6 +128,7 @@ namespace GPACalculator
             this.coursesListView.AllowUserToDeleteRows = false;
             this.coursesListView.AutoGenerateColumns = false;
             this.coursesListView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.coursesListView.BackgroundColor = System.Drawing.Color.LightCyan;
             this.coursesListView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.coursesListView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codeDataGridViewTextBoxColumn,
@@ -140,7 +142,8 @@ namespace GPACalculator
             this.coursesListView.RowTemplate.Height = 23;
             this.coursesListView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.coursesListView.Size = new System.Drawing.Size(964, 531);
-            this.coursesListView.TabIndex = 1;
+            this.coursesListView.StandardTab = true;
+            this.coursesListView.TabIndex = 6;
             // 
             // searchGroup
             // 
@@ -156,26 +159,65 @@ namespace GPACalculator
             // 
             // searchLayout
             // 
-            this.searchLayout.Controls.Add(this.searchCodeLayout);
-            this.searchLayout.Controls.Add(this.searchNameLayout);
-            this.searchLayout.Controls.Add(this.searchSemesterLayout);
-            this.searchLayout.Controls.Add(this.searchSeasonLayout);
+            this.searchLayout.ColumnCount = 5;
+            this.searchLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19F));
+            this.searchLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.searchLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13F));
+            this.searchLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17F));
+            this.searchLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16F));
+            this.searchLayout.Controls.Add(this.searchSeasonLayout, 3, 0);
+            this.searchLayout.Controls.Add(this.searchCodeLayout, 0, 0);
+            this.searchLayout.Controls.Add(this.searchSemesterLayout, 2, 0);
+            this.searchLayout.Controls.Add(this.searchNameLayout, 1, 0);
+            this.searchLayout.Controls.Add(this.searchEnabled, 4, 0);
             this.searchLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.searchLayout.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchLayout.Location = new System.Drawing.Point(3, 30);
             this.searchLayout.Name = "searchLayout";
-            this.searchLayout.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.searchLayout.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.searchLayout.RowCount = 1;
+            this.searchLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.searchLayout.Size = new System.Drawing.Size(958, 67);
             this.searchLayout.TabIndex = 0;
+            // 
+            // searchSeasonLayout
+            // 
+            this.searchSeasonLayout.Controls.Add(this.searchSeasonLabel);
+            this.searchSeasonLayout.Controls.Add(this.searchSeason);
+            this.searchSeasonLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchSeasonLayout.Location = new System.Drawing.Point(640, 3);
+            this.searchSeasonLayout.Name = "searchSeasonLayout";
+            this.searchSeasonLayout.Size = new System.Drawing.Size(153, 61);
+            this.searchSeasonLayout.TabIndex = 3;
+            // 
+            // searchSeasonLabel
+            // 
+            this.searchSeasonLabel.AutoSize = true;
+            this.searchSeasonLabel.Location = new System.Drawing.Point(3, 0);
+            this.searchSeasonLabel.Name = "searchSeasonLabel";
+            this.searchSeasonLabel.Size = new System.Drawing.Size(52, 18);
+            this.searchSeasonLabel.TabIndex = 0;
+            this.searchSeasonLabel.Text = "Season";
+            // 
+            // searchSeason
+            // 
+            this.searchSeason.Enabled = false;
+            this.searchSeason.FormattingEnabled = true;
+            this.searchSeason.Location = new System.Drawing.Point(3, 21);
+            this.searchSeason.Name = "searchSeason";
+            this.searchSeason.Size = new System.Drawing.Size(121, 26);
+            this.searchSeason.TabIndex = 4;
+            this.searchSeason.SelectedValueChanged += new System.EventHandler(this.RefreshCourses);
+            this.searchSeason.TextChanged += new System.EventHandler(this.RefreshCourses);
             // 
             // searchCodeLayout
             // 
             this.searchCodeLayout.Controls.Add(this.searchCodeLabel);
             this.searchCodeLayout.Controls.Add(this.searchCode);
-            this.searchCodeLayout.Location = new System.Drawing.Point(30, 3);
-            this.searchCodeLayout.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.searchCodeLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchCodeLayout.Location = new System.Drawing.Point(13, 3);
             this.searchCodeLayout.Name = "searchCodeLayout";
-            this.searchCodeLayout.Size = new System.Drawing.Size(162, 61);
+            this.searchCodeLayout.Size = new System.Drawing.Size(172, 61);
             this.searchCodeLayout.TabIndex = 0;
             // 
             // searchCodeLabel
@@ -189,6 +231,7 @@ namespace GPACalculator
             // 
             // searchCode
             // 
+            this.searchCode.Enabled = false;
             this.searchCode.FormattingEnabled = true;
             this.searchCode.Location = new System.Drawing.Point(3, 21);
             this.searchCode.Name = "searchCode";
@@ -197,14 +240,44 @@ namespace GPACalculator
             this.searchCode.SelectedValueChanged += new System.EventHandler(this.RefreshCourses);
             this.searchCode.TextChanged += new System.EventHandler(this.RefreshCourses);
             // 
+            // searchSemesterLayout
+            // 
+            this.searchSemesterLayout.Controls.Add(this.searchYearLabel);
+            this.searchSemesterLayout.Controls.Add(this.searchYear);
+            this.searchSemesterLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchSemesterLayout.Location = new System.Drawing.Point(519, 3);
+            this.searchSemesterLayout.Name = "searchSemesterLayout";
+            this.searchSemesterLayout.Size = new System.Drawing.Size(115, 61);
+            this.searchSemesterLayout.TabIndex = 2;
+            // 
+            // searchYearLabel
+            // 
+            this.searchYearLabel.AutoSize = true;
+            this.searchYearLabel.Location = new System.Drawing.Point(3, 0);
+            this.searchYearLabel.Name = "searchYearLabel";
+            this.searchYearLabel.Size = new System.Drawing.Size(34, 18);
+            this.searchYearLabel.TabIndex = 0;
+            this.searchYearLabel.Text = "Year";
+            // 
+            // searchYear
+            // 
+            this.searchYear.Enabled = false;
+            this.searchYear.FormattingEnabled = true;
+            this.searchYear.Location = new System.Drawing.Point(3, 21);
+            this.searchYear.Name = "searchYear";
+            this.searchYear.Size = new System.Drawing.Size(97, 26);
+            this.searchYear.TabIndex = 3;
+            this.searchYear.SelectedValueChanged += new System.EventHandler(this.RefreshCourses);
+            this.searchYear.TextChanged += new System.EventHandler(this.RefreshCourses);
+            // 
             // searchNameLayout
             // 
             this.searchNameLayout.Controls.Add(this.searchNameLabel);
             this.searchNameLayout.Controls.Add(this.searchName);
-            this.searchNameLayout.Location = new System.Drawing.Point(212, 3);
-            this.searchNameLayout.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.searchNameLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchNameLayout.Location = new System.Drawing.Point(191, 3);
             this.searchNameLayout.Name = "searchNameLayout";
-            this.searchNameLayout.Size = new System.Drawing.Size(311, 61);
+            this.searchNameLayout.Size = new System.Drawing.Size(322, 61);
             this.searchNameLayout.TabIndex = 1;
             // 
             // searchNameLabel
@@ -219,72 +292,27 @@ namespace GPACalculator
             // searchName
             // 
             this.searchName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.searchName.Enabled = false;
             this.searchName.FormattingEnabled = true;
             this.searchName.Location = new System.Drawing.Point(3, 21);
             this.searchName.Name = "searchName";
             this.searchName.Size = new System.Drawing.Size(304, 26);
-            this.searchName.TabIndex = 1;
+            this.searchName.TabIndex = 2;
             this.searchName.TextUpdate += new System.EventHandler(this.RefreshCourses);
             this.searchName.SelectedValueChanged += new System.EventHandler(this.RefreshCourses);
             this.searchName.TextChanged += new System.EventHandler(this.RefreshCourses);
             // 
-            // searchSemesterLayout
+            // searchEnabled
             // 
-            this.searchSemesterLayout.Controls.Add(this.searchYearLabel);
-            this.searchSemesterLayout.Controls.Add(this.searchYear);
-            this.searchSemesterLayout.Location = new System.Drawing.Point(543, 3);
-            this.searchSemesterLayout.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
-            this.searchSemesterLayout.Name = "searchSemesterLayout";
-            this.searchSemesterLayout.Size = new System.Drawing.Size(109, 61);
-            this.searchSemesterLayout.TabIndex = 2;
-            // 
-            // searchYearLabel
-            // 
-            this.searchYearLabel.AutoSize = true;
-            this.searchYearLabel.Location = new System.Drawing.Point(3, 0);
-            this.searchYearLabel.Name = "searchYearLabel";
-            this.searchYearLabel.Size = new System.Drawing.Size(34, 18);
-            this.searchYearLabel.TabIndex = 0;
-            this.searchYearLabel.Text = "Year";
-            // 
-            // searchSeasonLayout
-            // 
-            this.searchSeasonLayout.Controls.Add(this.searchSeasonLabel);
-            this.searchSeasonLayout.Controls.Add(this.searchSeason);
-            this.searchSeasonLayout.Location = new System.Drawing.Point(672, 3);
-            this.searchSeasonLayout.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
-            this.searchSeasonLayout.Name = "searchSeasonLayout";
-            this.searchSeasonLayout.Size = new System.Drawing.Size(129, 61);
-            this.searchSeasonLayout.TabIndex = 3;
-            // 
-            // searchSeasonLabel
-            // 
-            this.searchSeasonLabel.AutoSize = true;
-            this.searchSeasonLabel.Location = new System.Drawing.Point(3, 0);
-            this.searchSeasonLabel.Name = "searchSeasonLabel";
-            this.searchSeasonLabel.Size = new System.Drawing.Size(52, 18);
-            this.searchSeasonLabel.TabIndex = 0;
-            this.searchSeasonLabel.Text = "Season";
-            // 
-            // searchSeason
-            // 
-            this.searchSeason.FormattingEnabled = true;
-            this.searchSeason.Location = new System.Drawing.Point(3, 21);
-            this.searchSeason.Name = "searchSeason";
-            this.searchSeason.Size = new System.Drawing.Size(121, 26);
-            this.searchSeason.TabIndex = 1;
-            this.searchSeason.SelectedValueChanged += new System.EventHandler(this.RefreshCourses);
-            this.searchSeason.TextChanged += new System.EventHandler(this.RefreshCourses);
-            // 
-            // searchYear
-            // 
-            this.searchYear.FormattingEnabled = true;
-            this.searchYear.Location = new System.Drawing.Point(3, 21);
-            this.searchYear.Name = "searchYear";
-            this.searchYear.Size = new System.Drawing.Size(97, 26);
-            this.searchYear.TabIndex = 1;
-            this.searchYear.SelectedValueChanged += new System.EventHandler(this.RefreshCourses);
-            this.searchYear.TextChanged += new System.EventHandler(this.RefreshCourses);
+            this.searchEnabled.AutoSize = true;
+            this.searchEnabled.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchEnabled.Location = new System.Drawing.Point(799, 3);
+            this.searchEnabled.Name = "searchEnabled";
+            this.searchEnabled.Size = new System.Drawing.Size(146, 61);
+            this.searchEnabled.TabIndex = 5;
+            this.searchEnabled.Text = "Enable Search";
+            this.searchEnabled.UseVisualStyleBackColor = true;
+            this.searchEnabled.CheckedChanged += new System.EventHandler(this.searchEnabled_CheckedChanged);
             // 
             // footerPanel
             // 
@@ -302,7 +330,7 @@ namespace GPACalculator
             this.addCoursesButton.Location = new System.Drawing.Point(802, 13);
             this.addCoursesButton.Name = "addCoursesButton";
             this.addCoursesButton.Size = new System.Drawing.Size(150, 30);
-            this.addCoursesButton.TabIndex = 0;
+            this.addCoursesButton.TabIndex = 7;
             this.addCoursesButton.Text = "Add Selected Courses";
             this.addCoursesButton.UseVisualStyleBackColor = true;
             this.addCoursesButton.Click += new System.EventHandler(this.addCoursesButton_Click);
@@ -339,6 +367,7 @@ namespace GPACalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(964, 681);
             this.Controls.Add(this.footerPanel);
             this.Controls.Add(this.contentPanel);
@@ -346,7 +375,7 @@ namespace GPACalculator
             this.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "CourseListForm";
-            this.Text = "CourseListForm";
+            this.Text = "GPA Calculator - Courses";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CourseListForm_FormClosing);
             this.Load += new System.EventHandler(this.CourseListForm_Load);
             this.titlePanel.ResumeLayout(false);
@@ -355,14 +384,15 @@ namespace GPACalculator
             ((System.ComponentModel.ISupportInitialize)(this.coursesListView)).EndInit();
             this.searchGroup.ResumeLayout(false);
             this.searchLayout.ResumeLayout(false);
-            this.searchCodeLayout.ResumeLayout(false);
-            this.searchCodeLayout.PerformLayout();
-            this.searchNameLayout.ResumeLayout(false);
-            this.searchNameLayout.PerformLayout();
-            this.searchSemesterLayout.ResumeLayout(false);
-            this.searchSemesterLayout.PerformLayout();
+            this.searchLayout.PerformLayout();
             this.searchSeasonLayout.ResumeLayout(false);
             this.searchSeasonLayout.PerformLayout();
+            this.searchCodeLayout.ResumeLayout(false);
+            this.searchCodeLayout.PerformLayout();
+            this.searchSemesterLayout.ResumeLayout(false);
+            this.searchSemesterLayout.PerformLayout();
+            this.searchNameLayout.ResumeLayout(false);
+            this.searchNameLayout.PerformLayout();
             this.footerPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -380,7 +410,6 @@ namespace GPACalculator
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn semesterDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource courseBindingSource;
-        private System.Windows.Forms.FlowLayoutPanel searchLayout;
         private System.Windows.Forms.FlowLayoutPanel searchCodeLayout;
         private System.Windows.Forms.Label searchCodeLabel;
         private System.Windows.Forms.ComboBox searchCode;
@@ -397,5 +426,7 @@ namespace GPACalculator
         private System.Windows.Forms.ComboBox searchYear;
         private System.Windows.Forms.Panel footerPanel;
         private System.Windows.Forms.Button addCoursesButton;
+        private System.Windows.Forms.TableLayoutPanel searchLayout;
+        private System.Windows.Forms.CheckBox searchEnabled;
     }
 }

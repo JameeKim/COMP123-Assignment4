@@ -5,6 +5,12 @@
 This application is meant to be used by individuals who want a simple tool to
 calculate their GPA.
 
+### Executing the Application
+
+If the application reports an error with `FileNotFoundException`, you need to
+copy `Courses.json` file into the directory where the executable file is
+located. It is typically in `<Project Folder>\GPACalculator\bin\Debug`.
+
 ### Features
 
 This application aims to provide following functionalities.
@@ -58,25 +64,19 @@ list using controls for search. Courses that are already in the grade entries is
 not shown in order to prevent duplicate entries. There can be at most one course
 list window that is open at a moment.
 
-### Executing the Application
-
-If the application reports an error with `FileNotFoundException`, you need to
-copy `Courses.json` file into the directory where the executable file is
-located. It is typically in `<Project Folder>\GPACalculator\bin\Debug`.
-
 ## Tasks
 
 - [ ] Spash screen
-- [ ] Main form with (4/6)
-  - [ ] At least six among the following (3/6)
+- [ ] Main form with (5/6)
+  - [X] At least six among the following (6/6)
     - [X] Button
     - [X] Label
     - [ ] Text Box
     - [ ] Radio Button
-    - [ ] Check Box
+    - [X] Check Box
     - [ ] Tab Control
-    - [ ] Picture Box
-    - [ ] Table Layout
+    - [X] Picture Box
+    - [X] Table Layout
     - [X] Flow Layout
   - [X] At least one of (1/1)
     - [ ] List Box

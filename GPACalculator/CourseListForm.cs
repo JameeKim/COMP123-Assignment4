@@ -38,6 +38,12 @@ namespace GPACalculator
         /// <returns>True if the object should be shown, false if not</returns>
         private bool FilterPredicate(Course course)
         {
+            // Only filter out already included courses if search is disabled
+            if (!searchEnabled.Checked)
+            {
+                return !mainForm.grades.Contains(new GradeEntry(course));
+            }
+
             // All strings must be converted to lowercase in order to make the search case-insensitive
             string semester = course.Semester.ToString().ToLower();
 
@@ -131,6 +137,18 @@ namespace GPACalculator
                 mainForm.grades.Sort();
                 RefreshCourses(sender, e);
             }
+        }
+
+        private void searchEnabled_CheckedChanged(object sender, EventArgs e)
+        {
+            bool isEnabled = searchEnabled.Checked;
+
+            searchCode.Enabled = isEnabled;
+            searchName.Enabled = isEnabled;
+            searchYear.Enabled = isEnabled;
+            searchSeason.Enabled = isEnabled;
+
+            RefreshCourses(sender, e);
         }
     }
 }
