@@ -103,13 +103,14 @@ namespace GPACalculator
             // 
             // backButton
             // 
+            this.backButton.BackColor = System.Drawing.Color.Teal;
             this.backButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.backButton.Location = new System.Drawing.Point(5, 5);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(94, 40);
             this.backButton.TabIndex = 0;
             this.backButton.Text = "Back";
-            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.UseVisualStyleBackColor = false;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // contentPanel
@@ -117,6 +118,7 @@ namespace GPACalculator
             this.contentPanel.Controls.Add(this.coursesListView);
             this.contentPanel.Controls.Add(this.searchGroup);
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contentPanel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.contentPanel.Location = new System.Drawing.Point(0, 50);
             this.contentPanel.Name = "contentPanel";
             this.contentPanel.Size = new System.Drawing.Size(964, 631);
@@ -128,7 +130,7 @@ namespace GPACalculator
             this.coursesListView.AllowUserToDeleteRows = false;
             this.coursesListView.AutoGenerateColumns = false;
             this.coursesListView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.coursesListView.BackgroundColor = System.Drawing.Color.LightCyan;
+            this.coursesListView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.coursesListView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.coursesListView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codeDataGridViewTextBoxColumn,
@@ -150,6 +152,7 @@ namespace GPACalculator
             this.searchGroup.Controls.Add(this.searchLayout);
             this.searchGroup.Dock = System.Windows.Forms.DockStyle.Top;
             this.searchGroup.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchGroup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.searchGroup.Location = new System.Drawing.Point(0, 0);
             this.searchGroup.Name = "searchGroup";
             this.searchGroup.Size = new System.Drawing.Size(964, 100);
@@ -201,7 +204,9 @@ namespace GPACalculator
             // 
             // searchSeason
             // 
+            this.searchSeason.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.searchSeason.Enabled = false;
+            this.searchSeason.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.searchSeason.FormattingEnabled = true;
             this.searchSeason.Location = new System.Drawing.Point(3, 21);
             this.searchSeason.Name = "searchSeason";
@@ -231,7 +236,9 @@ namespace GPACalculator
             // 
             // searchCode
             // 
+            this.searchCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.searchCode.Enabled = false;
+            this.searchCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.searchCode.FormattingEnabled = true;
             this.searchCode.Location = new System.Drawing.Point(3, 21);
             this.searchCode.Name = "searchCode";
@@ -261,7 +268,9 @@ namespace GPACalculator
             // 
             // searchYear
             // 
+            this.searchYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.searchYear.Enabled = false;
+            this.searchYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.searchYear.FormattingEnabled = true;
             this.searchYear.Location = new System.Drawing.Point(3, 21);
             this.searchYear.Name = "searchYear";
@@ -292,7 +301,9 @@ namespace GPACalculator
             // searchName
             // 
             this.searchName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.searchName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.searchName.Enabled = false;
+            this.searchName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.searchName.FormattingEnabled = true;
             this.searchName.Location = new System.Drawing.Point(3, 21);
             this.searchName.Name = "searchName";
@@ -327,12 +338,13 @@ namespace GPACalculator
             // 
             this.addCoursesButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.addCoursesButton.BackColor = System.Drawing.Color.Teal;
             this.addCoursesButton.Location = new System.Drawing.Point(802, 13);
             this.addCoursesButton.Name = "addCoursesButton";
             this.addCoursesButton.Size = new System.Drawing.Size(150, 30);
             this.addCoursesButton.TabIndex = 7;
             this.addCoursesButton.Text = "Add Selected Courses";
-            this.addCoursesButton.UseVisualStyleBackColor = true;
+            this.addCoursesButton.UseVisualStyleBackColor = false;
             this.addCoursesButton.Click += new System.EventHandler(this.addCoursesButton_Click);
             // 
             // codeDataGridViewTextBoxColumn
@@ -367,12 +379,13 @@ namespace GPACalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.AliceBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(964, 681);
             this.Controls.Add(this.footerPanel);
             this.Controls.Add(this.contentPanel);
             this.Controls.Add(this.titlePanel);
             this.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "CourseListForm";
             this.Text = "GPA Calculator - Courses";

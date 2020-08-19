@@ -80,6 +80,7 @@ namespace GPACalculator
             // 
             // viewCoursesButton
             // 
+            this.viewCoursesButton.BackColor = System.Drawing.Color.Teal;
             this.viewCoursesButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.viewCoursesButton.Location = new System.Drawing.Point(5, 5);
             this.viewCoursesButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -87,7 +88,7 @@ namespace GPACalculator
             this.viewCoursesButton.Size = new System.Drawing.Size(114, 50);
             this.viewCoursesButton.TabIndex = 1;
             this.viewCoursesButton.Text = "View Courses";
-            this.viewCoursesButton.UseVisualStyleBackColor = true;
+            this.viewCoursesButton.UseVisualStyleBackColor = false;
             this.viewCoursesButton.Click += new System.EventHandler(this.viewCoursesButton_Click);
             // 
             // gradeList
@@ -96,6 +97,7 @@ namespace GPACalculator
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gradeList.AutoGenerateColumns = false;
             this.gradeList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.gradeList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.gradeList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gradeList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.gradeDataGridViewTextBoxColumn,
@@ -134,6 +136,9 @@ namespace GPACalculator
             // 
             // gradeEdit
             // 
+            this.gradeEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.gradeEdit.Enabled = false;
+            this.gradeEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.gradeEdit.Location = new System.Drawing.Point(61, 3);
             this.gradeEdit.Name = "gradeEdit";
             this.gradeEdit.Size = new System.Drawing.Size(120, 25);
@@ -155,17 +160,18 @@ namespace GPACalculator
             this.gpaValue.Name = "gpaValue";
             this.gpaValue.Size = new System.Drawing.Size(50, 20);
             this.gpaValue.TabIndex = 6;
-            this.gpaValue.Text = "100.00";
+            this.gpaValue.Text = "0.00";
             this.gpaValue.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // removeCoursesButton
             // 
-            this.removeCoursesButton.Location = new System.Drawing.Point(749, 12);
+            this.removeCoursesButton.BackColor = System.Drawing.Color.Teal;
+            this.removeCoursesButton.Location = new System.Drawing.Point(749, 15);
             this.removeCoursesButton.Name = "removeCoursesButton";
             this.removeCoursesButton.Size = new System.Drawing.Size(200, 40);
             this.removeCoursesButton.TabIndex = 4;
             this.removeCoursesButton.Text = "Remove Selected Courses";
-            this.removeCoursesButton.UseVisualStyleBackColor = true;
+            this.removeCoursesButton.UseVisualStyleBackColor = false;
             this.removeCoursesButton.Click += new System.EventHandler(this.removeCoursesButton_Click);
             // 
             // footerPanel
@@ -175,6 +181,7 @@ namespace GPACalculator
             this.footerPanel.Controls.Add(this.gradeEditLayout);
             this.footerPanel.Controls.Add(this.gpaLayout);
             this.footerPanel.Controls.Add(this.removeCoursesButton);
+            this.footerPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.footerPanel.Location = new System.Drawing.Point(3, 489);
             this.footerPanel.Name = "footerPanel";
             this.footerPanel.Size = new System.Drawing.Size(958, 112);
@@ -182,22 +189,24 @@ namespace GPACalculator
             // 
             // loadButton
             // 
-            this.loadButton.Location = new System.Drawing.Point(165, 12);
+            this.loadButton.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.loadButton.Location = new System.Drawing.Point(165, 15);
             this.loadButton.Name = "loadButton";
             this.loadButton.Size = new System.Drawing.Size(150, 40);
             this.loadButton.TabIndex = 6;
             this.loadButton.Text = "Load Grades";
-            this.loadButton.UseVisualStyleBackColor = true;
+            this.loadButton.UseVisualStyleBackColor = false;
             this.loadButton.Click += new System.EventHandler(this.loadButton_Click);
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(9, 12);
+            this.saveButton.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.saveButton.Location = new System.Drawing.Point(9, 15);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(150, 40);
             this.saveButton.TabIndex = 5;
             this.saveButton.Text = "Save Grades";
-            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.UseVisualStyleBackColor = false;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // gradeEditLayout
@@ -233,6 +242,7 @@ namespace GPACalculator
             this.verticalLayout.Controls.Add(this.footerPanel);
             this.verticalLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.verticalLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.verticalLayout.ForeColor = System.Drawing.SystemColors.ControlText;
             this.verticalLayout.Location = new System.Drawing.Point(0, 60);
             this.verticalLayout.Name = "verticalLayout";
             this.verticalLayout.Size = new System.Drawing.Size(964, 621);
@@ -288,10 +298,12 @@ namespace GPACalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(964, 681);
             this.Controls.Add(this.verticalLayout);
             this.Controls.Add(this.titlePanel);
             this.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MainForm";
             this.Text = "GPA Calculator - Grades";
