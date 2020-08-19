@@ -44,9 +44,9 @@ namespace GPACalculator
             this.footerPanel = new System.Windows.Forms.Panel();
             this.loadButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.gradeEditLayout = new System.Windows.Forms.FlowLayoutPanel();
+            this.gradeEditLabel = new System.Windows.Forms.Label();
+            this.gpaLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.verticalLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
@@ -60,8 +60,8 @@ namespace GPACalculator
             this.viewCoursesButtonPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gradeEdit)).BeginInit();
             this.footerPanel.SuspendLayout();
-            this.flowLayoutPanel3.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
+            this.gradeEditLayout.SuspendLayout();
+            this.gpaLayout.SuspendLayout();
             this.verticalLayout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gradeEntryBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -172,8 +172,8 @@ namespace GPACalculator
             // 
             this.footerPanel.Controls.Add(this.loadButton);
             this.footerPanel.Controls.Add(this.saveButton);
-            this.footerPanel.Controls.Add(this.flowLayoutPanel3);
-            this.footerPanel.Controls.Add(this.flowLayoutPanel2);
+            this.footerPanel.Controls.Add(this.gradeEditLayout);
+            this.footerPanel.Controls.Add(this.gpaLayout);
             this.footerPanel.Controls.Add(this.removeCoursesButton);
             this.footerPanel.Location = new System.Drawing.Point(3, 489);
             this.footerPanel.Name = "footerPanel";
@@ -200,32 +200,32 @@ namespace GPACalculator
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
-            // flowLayoutPanel3
+            // gradeEditLayout
             // 
-            this.flowLayoutPanel3.Controls.Add(this.label1);
-            this.flowLayoutPanel3.Controls.Add(this.gradeEdit);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(508, 12);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(190, 35);
-            this.flowLayoutPanel3.TabIndex = 10;
+            this.gradeEditLayout.Controls.Add(this.gradeEditLabel);
+            this.gradeEditLayout.Controls.Add(this.gradeEdit);
+            this.gradeEditLayout.Location = new System.Drawing.Point(508, 12);
+            this.gradeEditLayout.Name = "gradeEditLayout";
+            this.gradeEditLayout.Size = new System.Drawing.Size(190, 35);
+            this.gradeEditLayout.TabIndex = 10;
             // 
-            // label1
+            // gradeEditLabel
             // 
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 25);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Grade";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.gradeEditLabel.Location = new System.Drawing.Point(3, 0);
+            this.gradeEditLabel.Name = "gradeEditLabel";
+            this.gradeEditLabel.Size = new System.Drawing.Size(52, 25);
+            this.gradeEditLabel.TabIndex = 9;
+            this.gradeEditLabel.Text = "Grade";
+            this.gradeEditLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // flowLayoutPanel2
+            // gpaLayout
             // 
-            this.flowLayoutPanel2.Controls.Add(this.gpaLabel);
-            this.flowLayoutPanel2.Controls.Add(this.gpaValue);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(407, 75);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(156, 27);
-            this.flowLayoutPanel2.TabIndex = 8;
+            this.gpaLayout.Controls.Add(this.gpaLabel);
+            this.gpaLayout.Controls.Add(this.gpaValue);
+            this.gpaLayout.Location = new System.Drawing.Point(407, 75);
+            this.gpaLayout.Name = "gpaLayout";
+            this.gpaLayout.Size = new System.Drawing.Size(156, 27);
+            this.gpaLayout.TabIndex = 8;
             // 
             // verticalLayout
             // 
@@ -302,8 +302,8 @@ namespace GPACalculator
             this.viewCoursesButtonPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gradeEdit)).EndInit();
             this.footerPanel.ResumeLayout(false);
-            this.flowLayoutPanel3.ResumeLayout(false);
-            this.flowLayoutPanel2.ResumeLayout(false);
+            this.gradeEditLayout.ResumeLayout(false);
+            this.gpaLayout.ResumeLayout(false);
             this.verticalLayout.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gradeEntryBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -328,9 +328,9 @@ namespace GPACalculator
         private System.Windows.Forms.Button removeCoursesButton;
         private System.Windows.Forms.Panel footerPanel;
         private System.Windows.Forms.FlowLayoutPanel verticalLayout;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.FlowLayoutPanel gradeEditLayout;
+        private System.Windows.Forms.Label gradeEditLabel;
+        private System.Windows.Forms.FlowLayoutPanel gpaLayout;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
