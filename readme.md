@@ -212,7 +212,7 @@ list window that is open at a moment.
 
 ## Tasks
 
-- [ ] Spash screen
+- [X] Spash screen
 - [ ] Main form with (5/6)
   - [X] At least six among the following (6/6)
     - [X] Button
